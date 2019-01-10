@@ -9,7 +9,7 @@ setup(name='fides',
       license='MIT',
       packages=['fides'],
       install_requires=[
-          'urllib',
+          'requests',
           'lime',
       ],
       zip_safe=False)

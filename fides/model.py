@@ -1,5 +1,5 @@
 import datetime
-from fides.explainers.explainer import Explainer
+from fides.explainers.lime import LimeExplainer
 
 
 class Model(object):
@@ -59,7 +59,7 @@ class Model(object):
                   random_state=None):
         """Generate an explainer for a model function.
         """
-        self.explainer = Explainer(**locals())
+        self.explainer = LimeExplainer(**locals())
 
     def explain(self,
                 data_row,

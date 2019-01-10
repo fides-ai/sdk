@@ -1,5 +1,5 @@
 import datetime
-from urllib import request
+import requests
 from fides.config import Config
 
 
@@ -32,7 +32,7 @@ class Agent(object):
         data = {**base_data, **data}
         base_url = Config.get_property('PROP_FIDES_SERVER_URL_NAME', default=PROP_FIDES_SERVER_URL_VAL)
         url = '/'.join(base_url, path)
-        request.Request(url, data=data)
+        requests.post(url, data=data)
 
     def _get_base_data(self):
         """
