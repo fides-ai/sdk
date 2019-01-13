@@ -9,7 +9,7 @@ To install Fides AI agent for Python:
 
 1. Install the client library 
     ```bash
-    pip install fides
+    python3 -m pip install --index-url https://test.pypi.org/simple/ fides
     ```  
     
 1. Setting up authentication
